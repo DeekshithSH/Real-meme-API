@@ -13,7 +13,7 @@ logging.basicConfig(
     datefmt="%d/%m/%Y %H:%M:%S",
     format='[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s',
     handlers=[logging.StreamHandler(stream=sys.stdout),
-              handlers.RotatingFileHandler("flofile.log", mode="a", maxBytes=104857600, backupCount=2, encoding="utf-8")],)
+              handlers.RotatingFileHandler("logfile.log", mode="a", maxBytes=104857600, backupCount=2, encoding="utf-8")],)
 
 logging.getLogger("aiohttp").setLevel(logging.ERROR)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
